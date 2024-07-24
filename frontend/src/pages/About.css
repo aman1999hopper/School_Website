@@ -1,0 +1,136 @@
+.about-us-page {
+    padding: 40px;
+    line-height: 1.6;
+    font-style: italic;
+    font-weight: bold;
+    background-image: url("https://media.istockphoto.com/id/1269162294/photo/back-to-school.jpg?s=1024x1024&w=is&k=20&c=m0HwWPksRDC5Iaw1h5btpaJaeE5uMUxNVtua6v7qVaw=");
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-us-page p, li{
+    color: white;
+  }
+  
+  .school-history, .vision-mission-values, .message-principal, .infrastructure-facilities {
+    margin-bottom: 30px;
+  }
+  
+  .school-history h2, .vision h2, .mission h2, .values h2, .message-principal h2, .infrastructure-facilities h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: azure;
+  }
+  
+  .vision-mission-values {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add padding around the section */
+  }
+  
+  .vision-mission-values > div {
+    flex: 1; /* Allows items to grow and shrink as needed */
+    min-width: 200px; /* Minimum width to ensure readability */
+    padding: 10px; /* Add padding inside each section */
+    box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+  }
+  
+  .vision-mission-values h2 {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .vision-mission-values p {
+    font-size: 1rem; /* Adjust font size */
+  }
+  
+  .values ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .values li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .vision-mission-values {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center align items */
+    }
+  
+    .vision-mission-values > div {
+      width: 100%; /* Full width for each item */
+      text-align: center; /* Center align text */
+    }
+  
+    .vision-mission-values h2 {
+      font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+  
+    .vision-mission-values p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  
+    .values li {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+ 
+  
+  section {
+    background-color: #444; /* Slightly lighter dark background for cards */
+    border-radius: 8px; /* Rounded corners for the cards */
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Required for positioning the tooltip */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+  }
+  
+  section:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+  }
+  
+  section h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  
+  section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  section ul li {
+    margin-bottom: 5px;
+  }
+  
+  section::after {
+    content: attr(data-tooltip); /* Tooltip text from data-tooltip attribute */
+    position: absolute; 
+    bottom: 100%; /* Position tooltip above the card */
+    left: 50%; 
+    transform: translateX(-50%); /* Center the tooltip */
+    background-color: #222; /* Dark background color for tooltip */
+    color: white; /* White text color */
+    padding: 5px 10px; /* Padding inside the tooltip */
+    border-radius: 4px; /* Rounded corners for tooltip */
+    white-space: nowrap; /* Prevent text from wrapping */
+    visibility: hidden; /* Hide tooltip by default */
+    opacity: 0; /* Transparent by default */
+    transition: opacity 0.3s; /* Smooth fade-in effect */
+  }
+  
+  section:hover::after {
+    visibility: visible; /* Show tooltip on hover */
+    opacity: 1; /* Fully opaque on hover */
+  }
+  
+  

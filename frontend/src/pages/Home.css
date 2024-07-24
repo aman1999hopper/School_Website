@@ -1,0 +1,118 @@
+.school-logo{
+    position: relative;
+    width: 100px;
+    float: left;
+    margin-top: 8px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.home-page h1{
+    color: white;
+    font-style: italic;
+}
+
+.home-page {
+    color: rgb(7, 7, 7);
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap; /* Allows the links to wrap to the next line if necessary */
+  justify-content: center;
+  gap: 20px; /* Adjust the space between links */
+  margin-top: 20px;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #000; /* Default text color */
+  padding: 10px 15px; /* Adjust padding for better touch targets */
+  font-size: 16px; /* Adjust font size for readability */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.quick-links a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .quick-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center align the links */
+  }
+
+  .quick-links a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px 12px; /* Adjust padding for better fit */
+  }
+}
+
+
+
+  /* My page arra  */
+
+  .mwPageArea {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto multiple lines if necessary */
+    justify-content: space-between; /* Space out the cards evenly */
+    padding: 20px;
+  }
+  
+  .mwPageBlock {
+    flex: 1 1 calc(33.333% - 20px); /* Make each card take up 1/3 of the container width minus some margin */
+    margin: 10px; /* Add margin around each card */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+  }
+  
+  .grid {
+    position: relative;
+    width: 100%;
+  }
+  
+  .effect-bubba {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  .effect-bubba img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Optional: Transition effect for image */
+  }
+  
+  .effect-bubba:hover img {
+    transform: scale(1.1); /* Optional: Zoom effect on hover */
+  }
+  
+  .effect-bubba figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    color: white; /* White text color */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    opacity: 0; /* Hide caption by default */
+    text-align: center; /* Center text inside figcaption */
+  }
+  
+  .effect-bubba:hover figcaption {
+    opacity: 1; /* Show caption on hover */
+  }
+  
+  .effect-bubba figcaption h2 {
+    margin: 0;
+    font-size: 1.5em; /* Adjust the size as needed */
+  }
+  
+  .effect-bubba figcaption p {
+    margin: 10px 0 0;
+    font-size: 1em; /* Adjust the size as needed */
+  }
+  
